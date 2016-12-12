@@ -1,0 +1,12 @@
+article.cluster.col-12
+  a(data-ng-href="/items/{{$ctrl.item.id}}" target="_self").content
+    div.image-container
+      img.image(src="/dist/img/default.png" data-ng-src="{{$ctrl.item.picture}}" alt="producto")
+    div.description-container
+      p.price 
+        span.currency {{$ctrl.item.price.currency | currencySymbolFilter}} 
+        span.amount {{$ctrl.item.price.amount}}
+        img.free-shipping(src="/dist/img/ic_shipping.png" alt="free shipping" data-ng-if="$ctrl.item.free_shipping")
+      h2.title {{$ctrl.item.title}}
+    div.location-container
+      span.location {{$ctrl.item.state}}

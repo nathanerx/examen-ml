@@ -1,0 +1,17 @@
+@import './public/scss/variables';
+@import './public/scss/mixins';
+
+body {
+	background:$gray-lighter;
+	font-family: Arial, sans-serif;
+}
+
+.only-readers {
+	display:none;
+}
+
+@media speech {
+	.only-readers {
+		display:block;
+	}
+}

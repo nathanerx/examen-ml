@@ -1,0 +1,39 @@
+@import './public/scss/variables';
+@import './public/scss/mixins';
+
+search {
+	display:block;
+	.search {
+		background:$yellow;
+		.logo-container {
+			line-height:72px;
+			.logo {
+				height:53px;
+				vertical-align:middle;
+			}
+		}
+		.form {
+			line-height:72px;
+			.field {
+				border:none;
+				padding:16px;
+				vertical-align:middle;
+			}
+			.field-search {
+				border-top-left-radius:4px;
+				border-bottom-left-radius:4px;
+				font-size:18px;
+				width:calc(100% - 50px);
+			}
+			.submit {
+				border-top-right-radius:4px;
+				border-bottom-right-radius:4px;
+				background:$gray-lighter;
+				width:50px;
+				.icon {
+					width:18px;
+				}
+			}
+		}
+	}
+}

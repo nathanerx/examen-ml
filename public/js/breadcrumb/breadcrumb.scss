@@ -1,0 +1,42 @@
+@import './public/scss/variables';
+@import './public/scss/mixins';
+
+breadcrumb {
+	display:block;
+	.breadcrumb {
+		.list {
+			list-style:none;
+			font-size:14px;
+			margin:16px 0;
+			&:after {
+				content:'';
+				display:block;
+				clear:both;
+			}
+			.item {
+				float:left;
+				.link {
+					color:$gray-light;
+					text-decoration:none;
+					&:after {
+						content: '>';
+						padding-left:4px;
+						padding-right:4px;
+					}
+				}
+				&.active {
+					color:$gray-light;
+					font-weight:bold;
+				}
+				&:last-child {
+					.link {
+						&:after {
+							content:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,26 @@
+@import './public/scss/variables';
+@import './public/scss/mixins';
+
+.container {
+	padding-left:8px;
+	padding-right:8px;
+}
+
+.row {
+	margin-left:-8px;
+	margin-right:-8px;
+	@include clearfix();
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {width: (100% * $i) / 12;}
+	.col-push-#{$i} {margin-left: (100% * $i) / 12;}
+}
+
+[class*="col-"] {
+	float:left;
+	padding-left:8px;
+	padding-right:8px;
+	box-sizing:border-box;
+}
+

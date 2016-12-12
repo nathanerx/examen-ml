@@ -1,0 +1,15 @@
+doctype html
+html(data-ng-app="App" lang="es")
+  head
+    title Mercado Libre Argentina
+    link(rel='stylesheet', href='/dist/css/style.css')
+  body.container
+    a.only-readers(href="#main-content") Contenido principal
+    header.row
+      search.col-12
+    main.row(id="main-content")
+      block content
+
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-sanitize.js")
+    script(src="/dist/js/script.js")

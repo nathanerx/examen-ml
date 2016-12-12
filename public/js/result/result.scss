@@ -1,0 +1,13 @@
+result {
+	display:block;
+	.result {
+		margin-bottom:64px;
+		cluster:last-child {
+			.cluster {
+				&:after {
+					content:none;
+				}
+			}
+		}
+	}
+}

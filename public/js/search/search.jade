@@ -1,0 +1,7 @@
+section.search.row
+  .col-push-1.col-1.logo-container
+    img.logo(src="/dist/img/Logo_ML.png" alt="mercado libre")
+  form(method="get" action="/items").col-9.form
+    input.field.field-search(type="search" name="search" id="search" data-ng-model="$ctrl.search" placeholder="Nunca dejes de buscar")
+    button.field.submit(type="submit")
+      img.icon(src="/dist/img/ic_Search.png" alt="search")

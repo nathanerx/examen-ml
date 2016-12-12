@@ -1,0 +1,20 @@
+article.item.col-12(data-ng-if="$ctrl.item")
+  .content
+    .description-container
+      img.image(src="/dist/img/default.png" data-ng-src="{{$ctrl.item.picture}}" alt="producto")
+
+      h2.title Descripción del producto
+      div(data-ng-bind-html="$ctrl.item.description").description
+      
+    .info-container
+      form.form
+        ul.detail
+          li.data.condition {{$ctrl.item.condition | conditionFilter}} 
+          li.data.sold-quantity {{$ctrl.item.sold_quantity}} vendidos
+        h1.title {{$ctrl.item.title}}
+        p.price
+          span.currency {{$ctrl.item.price.currency | currencySymbolFilter}} 
+          span.amount {{$ctrl.item.price.amount}}
+          sup.decimals {{$ctrl.item.price.decimals | leftPadFilter}}
+        input.submit(type="submit" value="Comprar")
+  
